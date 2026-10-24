@@ -1,0 +1,15 @@
+# Test that writes to R0 are ignored.
+Integer adder 4 1 1
+FP adder 3 4 1
+FP multiplier 2 3 1
+Load/store unit 5 1 5 1
+
+ROB entries = 16
+Issue width = 4
+
+R1=10, R2=20
+
+Addi R0, R1, 5
+Addi R3, R0, 7
+Add R0, R1, R2
+Add R4, R0, R1

@@ -1,0 +1,9 @@
+Integer adder 8 4 2
+FP adder 8 3 2
+FP multiplier 8 8 2
+Load/store unit 8 1 2 2
+ROB entries = 16
+R1=8
+Addi R2 R2 1
+Addi R1 R1 -1
+Bne R1 R0 -3

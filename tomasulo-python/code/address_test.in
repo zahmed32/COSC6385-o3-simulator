@@ -1,0 +1,6 @@
+Issue width = 2
+R10=8
+Mem[4]=12.5
+
+Ld F1, -4(R10)
+Sd F1, 0(R10)

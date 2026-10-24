@@ -1,0 +1,11 @@
+Integer adder 8 10 1
+FP adder 8 3 2
+FP multiplier 8 8 2
+Load/store unit 8 1 2 2
+ROB entries = 16
+F1=19
+Mem[4]=2
+Addi R1 R0 4
+Sd F1 0(R1)
+Ld F2 4(R0)
+Add.d F3 F2 F2

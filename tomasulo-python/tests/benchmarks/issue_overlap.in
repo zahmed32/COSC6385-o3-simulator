@@ -1,0 +1,17 @@
+Integer adder 16 1 1
+FP multiplier 4 20 1
+ROB entries = 32
+F1=2, F2=3
+Addi R1 R0 1
+Addi R2 R0 2
+Addi R3 R0 3
+Addi R4 R0 4
+Addi R5 R0 5
+Addi R6 R0 6
+Addi R7 R0 7
+Addi R8 R0 8
+Addi R9 R0 9
+Addi R10 R0 10
+Addi R11 R0 11
+Addi R12 R0 12
+Mult.d F3 F1 F2

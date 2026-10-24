@@ -1,0 +1,16 @@
+Issue width = 4
+R1=5, R2=5
+
+Beq R1, R2, 1
+Addi R3, R0, 99
+Addi R3, R0, 7
+
+Bne R1, R2, 1
+Addi R4, R0, 8
+
+Bne R1, R0, 1
+Addi R5, R0, 99
+Addi R5, R0, 9
+
+Beq R1, R0, 1
+Addi R6, R0, 10

@@ -1,0 +1,12 @@
+Integer adder 8 4 2
+FP adder 8 3 2
+FP multiplier 8 8 2
+Load/store unit 8 1 2 2
+ROB entries = 16
+F1=12, F2=25, F3=2
+Mult.d F10 F1 F3
+Sd F1 0(R0)
+Sd F2 4(R0)
+Ld F4 0(R0)
+Ld F5 4(R0)
+Add.d F6 F4 F5

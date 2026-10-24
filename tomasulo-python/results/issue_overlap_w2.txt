@@ -1,0 +1,91 @@
+                              ISSUE          EXE            MEM            WB             COMMIT         
+Addi R1 R0 1                  [1]            [2, 2]         []             [3]            [4]
+Addi R2 R0 2                  [1]            [3, 3]         []             [4]            [5]
+Addi R3 R0 3                  [2]            [4, 4]         []             [5]            [6]
+Addi R4 R0 4                  [2]            [5, 5]         []             [6]            [7]
+Addi R5 R0 5                  [3]            [6, 6]         []             [7]            [8]
+Addi R6 R0 6                  [3]            [7, 7]         []             [8]            [9]
+Addi R7 R0 7                  [4]            [8, 8]         []             [9]            [10]
+Addi R8 R0 8                  [4]            [9, 9]         []             [10]           [11]
+Addi R9 R0 9                  [5]            [10, 10]       []             [11]           [12]
+Addi R10 R0 10                [5]            [11, 11]       []             [12]           [13]
+Addi R11 R0 11                [6]            [12, 12]       []             [13]           [14]
+Addi R12 R0 12                [6]            [13, 13]       []             [14]           [15]
+Mult.d F3 F1 F2               [7]            [8, 27]        []             [28]           [29]
+
+REGISTER VALUES
+Integer registers:
+R0 = 0
+R1 = 1
+R2 = 2
+R3 = 3
+R4 = 4
+R5 = 5
+R6 = 6
+R7 = 7
+R8 = 8
+R9 = 9
+R10 = 10
+R11 = 11
+R12 = 12
+R13 = 0
+R14 = 0
+R15 = 0
+R16 = 0
+R17 = 0
+R18 = 0
+R19 = 0
+R20 = 0
+R21 = 0
+R22 = 0
+R23 = 0
+R24 = 0
+R25 = 0
+R26 = 0
+R27 = 0
+R28 = 0
+R29 = 0
+R30 = 0
+R31 = 0
+
+Floating-point registers:
+F0 = 0.0
+F1 = 2.0
+F2 = 3.0
+F3 = 6.0
+F4 = 0.0
+F5 = 0.0
+F6 = 0.0
+F7 = 0.0
+F8 = 0.0
+F9 = 0.0
+F10 = 0.0
+F11 = 0.0
+F12 = 0.0
+F13 = 0.0
+F14 = 0.0
+F15 = 0.0
+F16 = 0.0
+F17 = 0.0
+F18 = 0.0
+F19 = 0.0
+F20 = 0.0
+F21 = 0.0
+F22 = 0.0
+F23 = 0.0
+F24 = 0.0
+F25 = 0.0
+F26 = 0.0
+F27 = 0.0
+F28 = 0.0
+F29 = 0.0
+F30 = 0.0
+F31 = 0.0
+
+NON-ZERO MEMORY VALUES
+Address    Value
+
+Total cycles: 29
+Committed instructions: 13
+Branch mispredictions: 0
+Load replays: 0

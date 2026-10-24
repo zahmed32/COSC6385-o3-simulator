@@ -1,0 +1,24 @@
+Instruction buffer: list of normalized instruction strings; PC indexes words.
+Architectural registers: 32 integer and 32 floating-point values; R0 is zero.
+RAT: either a ready speculative value or a unique monotonically assigned ROB tag.
+
+Mutable records are SimpleNamespace instances (each ROB owns its stage lists).
+RS: busy, op, tag_1st, value_1st, valid_1st, tag_2nd, value_2nd,
+    valid_2nd, dest_tag. Fixed shared capacity per execution-unit type.
+FU: cycle, op, value1, value2, dest_tag. One deque per configured unit;
+    integer deques hold at most one active instruction, FP deques are pipelines.
+Result FIFO: value, dest_tag. Feeds one CDB latch and one WB per cycle.
+LSQ: ld_sd_tag, ready, executing, in_memory, op, address, data, dest_tag,
+     immediate, reg_tag, reg_value, valid. Stores remain until retirement;
+     loads remain until forwarding or memory completion.
+Address unit: busy, cycle, value1, value2, dest_tag (LSQ tag).
+Memory unit: busy, cycle, entry (LSQ record). Exactly one physical memory port.
+ROB: ROB_tag, PC, value (after WB), dest_tag, issue, exe, mem, cdb, commit,
+     address, fault. Branch records also hold predicted_next, taken,
+     mispredicted. Stage intervals are inclusive; stores use COMMIT, not MEM.
+PC state: PC, valid, branch_history, btb, recovery, resume_cycle, next_tag.
+
+At recovery, all younger speculative records are removed. RAT reconstruction
+starts from architectural registers and reapplies surviving ROB producers in
+program order. At load retirement, memory validation can trigger replay from
+that load. Reported status rows include only committed dynamic instructions.
